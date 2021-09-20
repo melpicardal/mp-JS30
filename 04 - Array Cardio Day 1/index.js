@@ -57,28 +57,38 @@ const people = [
   "Biondo, Frank",
 ];
 
-Array.prototype.filter();
+// Array.prototype.filter();
 // 1. Filter the list of inventors for those who were born in the 1500's
+const fifteen = inventors.filter(
+  (inventor) => inventor.year >= 1500 && inventor.year <= 1599
+);
+// console.table(fifteen);
 
-Array.prototype.map();
-// 2. Give us an array of the inventors first and last names
+// console.table(fifteen);
+// Array.prototype.map();
+// // 2. Give us an array of the inventors first and last names
+const fullName = inventors.map(
+  (inventor) => `${inventor.first} ${inventor.last}`
+);
+// console.table(fullName);
 
-Array.prototype.sort();
-// 3. Sort the inventors by birthdate, oldest to youngest
+// Array.prototype.sort();
+// // 3. Sort the inventors by birthdate, oldest to youngest
+const sortBirth = inventors.sort((a, b) => (a.year > b.year ? 1 : -1));
+console.table(sortBirth);
+// Array.prototype.reduce();
+// // 4. How many years did all the inventors live all together?
 
-Array.prototype.reduce();
-// 4. How many years did all the inventors live all together?
+// // 5. Sort the inventors by years lived
 
-// 5. Sort the inventors by years lived
+// // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
+// // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
-// 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
-// https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+// // 7. sort Exercise
+// // Sort the people alphabetically by last name
 
-// 7. sort Exercise
-// Sort the people alphabetically by last name
-
-// 8. Reduce Exercise
-// Sum up the instances of each of these
+// // 8. Reduce Exercise
+// // Sum up the instances of each of these
 const data = [
   "car",
   "car",
